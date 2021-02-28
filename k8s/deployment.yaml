@@ -17,6 +17,15 @@ spec:
       containers:
         - name: goserver
           image: "hermanoudi/hello-go:v9.5"
+
+          resources:
+            requests:
+              cpu: "0.05"
+              memory: 20Mi
+            limits:
+              cpu: "0.05"
+              memory: 25Mi
+
           readinessProbe:
             httpGet:
               path: /healthz

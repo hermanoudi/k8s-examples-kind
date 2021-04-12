@@ -7,3 +7,5 @@ spec:
     storage: 50Gi
   accessModes:
     - ReadWriteOnce
+    - ReadWriteMany  
+  

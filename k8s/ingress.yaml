@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-host
+  labels:
+      name: ingress-host
+spec:
+  rules:
+  - host: "ingress.fullcycle.com.br"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            serviceName: goserver-service
+            servicePort: 80
